@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adopta a un amic</title>
+    <link href="/styles/producte.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a
+          href="index.html"
+          class="navbar-logo"
+          >Pàgina principal</a
+        >
+      </div>
+      <div class="navbar-center">
+        <input
+          type="text"
+          placeholder="Introdueix text..."
+          class="search-bar"
+        />
+        <button class="search-button">Cerca</button>
+      </div>
+      <div class="navbar-right">
+        <a
+          href="carro.html"
+          class="navbar-link"
+          >Carro de Compra (<span id="cart-count">0</span>)</a
+        >
+      </div>
+    </nav>
+
+    <header>
+      <br />
+      <h1>Tenda</h1>
+      <p>Ajuda a la fundació! Se'l suports que necessitem! :D</p>
+    </header>
+
+    <div class="gallery-container">
+      <img
+        src="img/borrador.jpg"
+        class="gallery-img"
+        alt="Imatge 1"
+      />
+      <img
+        src="img/medidas.avif"
+        class="gallery-img"
+        alt="Imatge 2"
+        hidden
+      />
+      <img
+        src="img/cuatro.avif"
+        class="gallery-img"
+        alt="Imatge 3"
+        hidden
+      />
+
+      <a class="prev" onclick="changeImage(-1)">&#10096;</a>
+      <a class="next" onclick="changeImage(1)">&#10097;</a>
+    </div>
+
+    <section>
+      <h3 id="product-name">Gomes d'esborrar de potes de gat</h3>
+      <h4>Descripció de l'article</h4>
+
+      <ul id="product-description">
+        <il
+          >El paquet inclou: rebràs 4 gomes d'esborrar amb forma de pota de gat,
+          totes en diferents colors; quantitat suficient i dissenys poden
+          satisfer les teves diverses demandes.</il
+        ><br /><br />
+
+        <il
+          >Grandària adequada: cada bonic esborrany mesura 90 x 20 mm (deixo
+          anar x ample), i la goma mesura 60 mm de llarg, pots cabre fàcilment
+          en una bossa de papereria o butxaca.</il
+        ><br /><br />
+
+        <il
+          >Material de qualitat: aquests esborranys amb forma de pota de gat
+          estan fets de goma de qualitat, l'esborrany retràctil amb mecanisme
+          lliscant és fàcil d'usar i esborra errors en les notes, simplement
+          empeny suaument, la qual cosa és convenient i ràpid.</il
+        ><br />
+      </ul>
+    </section>
+    <div id="product-details"></div>
+    </div>
+    <section>
+      <br />
+      <form action="/procesar-compra" method="post">
+        <h2>Informació Personal</h2>
+
+        <label for="email">Correu electrònic:</label>
+        <input type="email" id="email" name="email" required /><br />
+
+        <label for="telefon">Telèfon:</label>
+        <input type="tel" id="telefon" name="telefon" /><br />
+
+        <br />
+        <h2>Informació d'Enviament</h2>
+        <label for="adreça">Adreça:</label>
+        <input type="text" id="adreça" name="adreça" required /><br />
+
+        <label for="ciutat">Ciutat:</label>
+        <input type="text" id="ciutat" name="ciutat" required /><br />
+
+        <label for="província">Província/Estat:</label>
+        <input type="text" id="província" name="província" /><br />
+
+        <label for="codiPostal">Codi Postal:</label>
+        <input type="text" id="codiPostal" name="codiPostal" required /><br />
+
+        <label for="pais">País:</label>
+        <input type="text" id="pais" name="pais" required /><br />
+
+        <br />
+        <h2>Informació de Pagament</h2>
+        <label for="numTargeta">Número de targeta:</label>
+        <input type="text" id="numTargeta" name="numTargeta" required /><br />
+
+        <label for="caducitat">Data de caducitat (MM/AA):</label>
+        <input type="text" id="caducitat" name="caducitat" required /><br />
+
+        <label for="cvv">Codi CVV:</label>
+        <input type="text" id="cvv" name="cvv" required /><br />
+
+        <label for="adreçaFacturació">Adreça de facturació:</label>
+        <input
+          type="text"
+          id="adreçaFacturació"
+          name="adreçaFacturació"
+        /><br /><br />
+
+        <label>
+          <input type="checkbox" name="acceptarTermes" required /> Accepto els
+          termes i condicions
+        </label>
+
+        <br /><br /><input type="submit" value="Finalitzar Compra" />
+      </form>
+    </section>
+
+    <br />
+    <footer>
+      <p class="final">by: Marta Moreno Santín</p>
+      <p class="final">© 2024 - Fundació Adopta un amic</p>
+    </footer>
+    <script src="/scripts/poducte.js"></script>
+  </body>
+</html>

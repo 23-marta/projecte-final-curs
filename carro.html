@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ca">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carro de la Compra</title>
+    <link href="/styles/carro.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <a
+          href="index.html"
+          class="navbar-logo"
+          >Pàgina principal</a
+        >
+      </div>
+      <div class="navbar-center">
+        <input
+          type="text"
+          placeholder="Introdueix text..."
+          class="search-bar"
+        />
+        <button class="search-button">Cerca</button>
+      </div>
+      <div class="navbar-right">
+        <a
+          href="carro.html"
+          class="navbar-link"
+          >Carro de Compra (<span id="cart-count">0</span>)</a
+        >
+      </div>
+    </nav>
+
+    <h1>El meu Carro de Compra</h1>
+    <div id="carro"></div>
+    <div id="total"></div>
+    <br/>
+    <button onclick="finalitzarCompra()">Finalitzar Compra</button>
+    <br/>
+    <br/>
+    <footer>
+      <p class="final">by: Marta Moreno Santín</p>
+      <p class="final">© 2024 - Fundació Adopta un amic</p>
+    </footer>
+    <script src="/scripts/carro.js"></script>
+  </body>
+</html>
